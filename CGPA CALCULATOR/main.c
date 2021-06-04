@@ -7,9 +7,9 @@ int main()
     int score;
     int unitOfCourse;
     int numOfCourse;
-    char grade[10] = {'A', 'B', 'C', 'D', 'E', 'F'};
+    char grade = 'A';
     double gradePoint[10] = {5.00, 4.00, 3.00, 2.00, 1.00, 0.00};
-    double qualityPoints1;
+    double qualityPoints;
     /*double qualityPoints2;
     double qualityPoints3;
     double qualityPoints4;
@@ -23,7 +23,7 @@ int main()
     scanf("%d", &numOfCourse);
     printf("==========================");
 
-    for(numOfCourse = 1; numOfCourse < 6; numOfCourse++){
+    for(int i = 0; i < numOfCourse; i++){
         printf("\nEnter your score: ");
         scanf("%d", &score);
         printf("Enter units: ");
@@ -44,14 +44,16 @@ int main()
             puts("Invalid Score");
         }
 
-        printf("==========================");
+        switch(grade){
+        case 'A' :
+        qualityPoints = unitOfCourse * gradePoint[0];
+        printf("Your quality point: %f", qualityPoints);
+        }
+
+        printf("\n==========================");
     }
 
-    /*switch(grade[10]){
-    case 'A' :
-        qualityPoints1 = numUnits * gradePoint[0];
-        printf("Your quality point: %f", gradePoints1);
-    }*/
+
 
 
     return 0;
