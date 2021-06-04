@@ -47,11 +47,11 @@ int main()
         printf("==========================");
     }
 
-    switch(grade[10]){
+    /*switch(grade[10]){
     case 'A' :
         qualityPoints1 = numUnits * gradePoint[0];
         printf("Your quality point: %f", gradePoints1);
-    }
+    }*/
 
 
     return 0;
