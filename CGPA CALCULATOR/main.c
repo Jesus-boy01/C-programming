@@ -10,8 +10,7 @@ int main()
     int unitOfCourse;
     double gradePoint[10] = {5.00, 4.00, 3.00, 2.00, 1.00, 0.00};
     double qualityPoints[20];
-    double totalQualityPoints;
-    //int totalUnits = 15;
+    double totalQualityPoints[30];
 
     printf("Enter number of courses: ");
     scanf("%d", &numOfCourse);
@@ -24,7 +23,7 @@ int main()
         printf("Enter units: ");
         scanf("%d", &unitOfCourse);
 
-        //Created a variable array to store the quality points which would be used to print the GPA of the student
+        //Assigned variable arrays to store the quality points which would be used to print the GPA of the student
         qualityPoints[0] = unitOfCourse * gradePoint[0];
         qualityPoints[1] = unitOfCourse * gradePoint[1];
         qualityPoints[2] = unitOfCourse * gradePoint[2];
@@ -56,6 +55,5 @@ int main()
         }
         printf("\n==========================");
     }
-
     return 0;
 }
