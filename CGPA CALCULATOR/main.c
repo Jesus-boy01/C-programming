@@ -3,22 +3,36 @@
 
 int main()
 {
+
+    //Created variables for the calculator to prompt the user and accept input
     int numOfCourse;
     int score;
     int unitOfCourse;
     double gradePoint[10] = {5.00, 4.00, 3.00, 2.00, 1.00, 0.00};
-    int totalUnits = 15;
+    double qualityPoints[20];
+    double totalQualityPoints;
+    //int totalUnits = 15;
 
     printf("Enter number of courses: ");
     scanf("%d", &numOfCourse);
     printf("==========================");
 
+    //Created a loop that prints the prompt which depends upon the number of courses entered by the user
     for(int i = 0; i < numOfCourse; i++){
         printf("\nEnter your score: ");
         scanf("%d", &score);
         printf("Enter units: ");
         scanf("%d", &unitOfCourse);
 
+        //Created a variable array to store the quality points which would be used to print the GPA of the student
+        qualityPoints[0] = unitOfCourse * gradePoint[0];
+        qualityPoints[1] = unitOfCourse * gradePoint[1];
+        qualityPoints[2] = unitOfCourse * gradePoint[2];
+        qualityPoints[3] = unitOfCourse * gradePoint[3];
+        qualityPoints[4] = unitOfCourse * gradePoint[4];
+        qualityPoints[5] = unitOfCourse * gradePoint[5];
+
+        //Created an if statement block to print out a grade for the user based on the score they input
         if(score >= 70 && score <=100){
             puts("Your grade is A");
             printf("Your quality point is: %f", unitOfCourse * gradePoint[0]);
@@ -42,5 +56,6 @@ int main()
         }
         printf("\n==========================");
     }
+
     return 0;
 }
