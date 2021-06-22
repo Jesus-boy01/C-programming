@@ -3,14 +3,15 @@
 
 int main()
 {
-
     //Created variables for the calculator to prompt the user and accept input
     int numOfCourse;
     int score;
     int unitOfCourse;
     double gradePoint[10] = {5.00, 4.00, 3.00, 2.00, 1.00, 0.00};
     double qualityPoints[20];
-    double totalQualityPoints[30];
+    /*double totalQualityPoints = 0.0;
+    double totalNumCourses[10] = {1, 2, 3, 4, 5};
+    double sumNumCourses[30];*/
 
     printf("Enter number of courses: ");
     scanf("%d", &numOfCourse);
@@ -34,26 +35,29 @@ int main()
         //Created an if statement block to print out a grade for the user based on the score they input
         if(score >= 70 && score <=100){
             puts("Your grade is A");
-            printf("Your quality point is: %f", unitOfCourse * gradePoint[0]);
+            printf("Your quality point is: %f", qualityPoints[0]);
         } else if(score >= 60 && score <= 69){
             puts("Your grade is B");
-            printf("Your quality point is: %f", unitOfCourse * gradePoint[1]);
+            printf("Your quality point is: %f", qualityPoints[1]);
         } else if(score >= 50 && score <= 59){
             puts("Your grade is C");
-            printf("Your quality point is: %f", unitOfCourse * gradePoint[2]);
+            printf("Your quality point is: %f", qualityPoints[2]);
         } else if(score >= 45 && score <= 49){
             puts("Your grade is D");
-            printf("Your quality point is: %f", unitOfCourse * gradePoint[3]);
+            printf("Your quality point is: %f", qualityPoints[3]);
         } else if(score >= 40 && score <= 44){
             puts("Your grade is E");
-            printf("Your quality point is: %f", unitOfCourse * gradePoint[4]);
+            printf("Your quality point is: %f", qualityPoints[4]);
         } else if(score >= 0 && score <= 39 ){
             puts("Your grade is F");
-            printf("Your quality point is: %f", unitOfCourse * gradePoint[5]);
+            printf("Your quality point is: %f", qualityPoints[5]);
         } else {
             puts("Invalid Score");
         }
         printf("\n==========================");
+
+
+
     }
     return 0;
 }
