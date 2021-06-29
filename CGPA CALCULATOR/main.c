@@ -9,9 +9,9 @@ int main()
     int unitOfCourse;
     double gradePoint[10] = {5.00, 4.00, 3.00, 2.00, 1.00, 0.00};
     double qualityPoints[20];
-    /*double totalQualityPoints = 0.0;
-    double totalNumCourses[10] = {1, 2, 3, 4, 5};
-    double sumNumCourses[30];*/
+    double totalQualityPoints;
+    int totalNumCourses;
+
 
     printf("Enter number of courses: ");
     scanf("%d", &numOfCourse);
@@ -31,6 +31,9 @@ int main()
         qualityPoints[3] = unitOfCourse * gradePoint[3];
         qualityPoints[4] = unitOfCourse * gradePoint[4];
         qualityPoints[5] = unitOfCourse * gradePoint[5];
+        totalNumCourses += unitOfCourse;
+
+
 
         //Created an if statement block to print out a grade for the user based on the score they input
         if(score >= 70 && score <=100){
@@ -55,9 +58,8 @@ int main()
             puts("Invalid Score");
         }
         printf("\n==========================");
-
-
-
     }
+
+    printf("\nYour total number of courses is %d", totalNumCourses);
     return 0;
 }
